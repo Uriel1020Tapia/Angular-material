@@ -1,0 +1,75 @@
+<mat-card class="p-0">
+    <mat-card-title class="">
+        <div class="card-title-text">Form validation</div>
+        <mat-divider></mat-divider>
+    </mat-card-title>
+    <mat-card-content>
+        <form >
+            <div fxLayout="row wrap">
+                <div fxFlex="100" fxFlex.gt-xs="50" class="pr-1">
+                    <div class="pb-1">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Outline form field</mat-label>
+                            <input
+                            matInput
+                            name="username"
+                            placeholder="Username (Min Length: 4, Max Length: 9)"
+                            value="">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="pb-1">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Outline form field</mat-label>
+                            <input
+                            matInput
+                            name="firstname"
+                            placeholder="First name"
+                            value="">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="pb-1">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Outline form field</mat-label>
+                        <input
+                            matInput
+                            type="email"
+                            name="email"
+                            placeholder="Your Email"
+                            value="">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="pb-1">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Outline form field</mat-label>
+                        <input
+                            matInput
+                            name="website"
+                            placeholder="Your Website (http://mhrafi.com)"
+                            value="">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="pb-1">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Outline form field</mat-label>
+                            <input 
+                            matInput
+                            name="date"
+                            placeholder="Date" 
+                            [matDatepicker]="appDatepicker">
+                            
+                            <mat-datepicker-toggle matSuffix [for]="appDatepicker"></mat-datepicker-toggle>
+                        </mat-form-field>
+                        <mat-datepicker #appDatepicker></mat-datepicker>
+                    </div>
+                </div>
+            </div>
+            <button 
+            mat-raised-button 
+            color="primary">Submit</button>
+        </form>
+    </mat-card-content>
+</mat-card>

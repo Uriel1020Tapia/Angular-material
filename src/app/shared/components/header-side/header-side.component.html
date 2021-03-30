@@ -1,0 +1,48 @@
+<mat-toolbar class="topbar">
+    <button
+    mat-icon-button
+    id="sidenavToggle"
+    fxHide.gt-md
+    fxHide.md
+    matTooltip="Toggle Hide/Open"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span fxFlex></span>
+  
+   <!-- Notification toggle button -->
+   <button
+   mat-icon-button
+   matTooltip="Notifications"
+   [style.overflow]="'visible'"
+   class="topbar-button-right"
+ >
+   <mat-icon>notifications</mat-icon>
+   <span class="notification-number mat-bg-warn">3</span>
+ </button>
+   <!-- Top left user menu -->
+   <button
+   mat-icon-button
+   [matMenuTriggerFor]="accountMenu"
+   class="topbar-button-right img-button">
+   <img src="../../../../assets/images/face-7.jpg" alt="" />
+ </button>
+ <mat-menu #accountMenu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>account_box</mat-icon>
+      <span>Profile</span>
+    </button>
+    <button mat-menu-item >
+      <mat-icon>settings</mat-icon>
+      <span>Account Settings</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>exit_to_app</mat-icon>
+      <span>Sign out</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>

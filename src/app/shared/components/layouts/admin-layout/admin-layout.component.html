@@ -1,0 +1,19 @@
+<div class="app-admin-wrap"  dir='ltr'>
+    <mat-sidenav-container
+    class="mat-drawer-container mat-sidenav-container app-admin-container app-side-nav-container mat-drawer-transition sidebar-white topbar-blue footer-blue sidebar-full sidebar-opened fixed-topbar">
+        <mat-sidenav-content>
+            <app-sidebar-side >
+
+            </app-sidebar-side>
+            <!-- App content -->
+            <div class="main-content-wrap" id="main-content-wrap" [perfectScrollbar]="">
+                <app-header-side> </app-header-side>
+     
+            <div class="rightside-content-hold" id="rightside-content-hold" [perfectScrollbar]="true">
+                <router-outlet></router-outlet>
+                <app-footer style="display: block; margin: 0 -.333rem -.33rem"></app-footer>
+            </div>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
