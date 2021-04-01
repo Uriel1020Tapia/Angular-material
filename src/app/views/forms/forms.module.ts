@@ -17,12 +17,16 @@ import { MatRadioModule } from "@angular/material/radio";
 import { MatStepperModule } from "@angular/material/stepper";
 import { BasicFormComponent } from './basic-form/basic-form.component';
 import { ReadExcelComponent } from './read-excel/read-excel.component';
-
-
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { ReaderExcelDirective } from 'src/app/directives/reader-excel.directive';
+import {MatTableModule} from '@angular/material/table';
+import { FileToBase64Component } from './file-to-base64/file-to-base64.component';
 @NgModule({
   declarations: [
     BasicFormComponent,
-    ReadExcelComponent
+    ReadExcelComponent,
+    ReaderExcelDirective,
+    FileToBase64Component
   ],
   imports: [
     CommonModule,
@@ -38,7 +42,9 @@ import { ReadExcelComponent } from './read-excel/read-excel.component';
     MatCheckboxModule,
     MatButtonModule,
     MatIconModule,
+    MatToolbarModule,
     MatStepperModule,
+    MatTableModule,
     FlexLayoutModule,
     FormsRoutingModule
   ]

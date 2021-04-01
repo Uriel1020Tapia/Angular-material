@@ -1,0 +1,26 @@
+<mat-card class="p-0">
+    <mat-card-title class="">
+        <div class="card-title-text">File BASE64 observable</div>
+        <mat-divider></mat-divider>
+    </mat-card-title>
+    <mat-card-content>
+        <div fxLayout="row" fxLayoutAlign="space-between  center">
+            <input type="file" (change)="onChangeFile($event)" multiple/>
+        </div>
+        <br>
+        <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="10px" *ngIf="myImage.length > 0">
+            <mat-card *ngFor="let item of myImage" fxFlex="calc(25%-10px)" fxFlex.sm="calc(25%-10px)" >
+              <mat-card-header>
+                <mat-card-title>Angular</mat-card-title>
+              </mat-card-header>
+              <img mat-card-image [src]="item" alt="No image">
+              <mat-card-content>
+                <p>
+                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error voluptate doloremque odio, dolore molestias possimus accusamus eaque maxime hic quia rerum nam, adipisci nulla ducimus nihil qui, id a ex!
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+
+    </mat-card-content>
+</mat-card>

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BasicFormComponent } from './basic-form/basic-form.component';
+import { FileToBase64Component } from './file-to-base64/file-to-base64.component';
 import { ReadExcelComponent } from './read-excel/read-excel.component';
 
 const routes: Routes = [
@@ -16,6 +17,11 @@ const routes: Routes = [
       path: 'read-excel',
       component: ReadExcelComponent,
       data: { title: 'Leer excel', breadcrumb: 'Read excel' }
+    },
+    {
+      path:'file-to-b64',
+      component:FileToBase64Component,
+      data: { title: 'File to Base64', breadcrumb: 'Converter File a base64' }
     }]
   }
 ];

@@ -20,21 +20,28 @@ export class SidebarSideComponent implements OnInit {
     {
       name: "Form Basic",
       type: "link",
-      tooltip: "Dashboard",
+      tooltip: "Form Basic",
       icon: "description",
       state: "forms/basic"
     },
     {
       name: "Read Excel",
       type: "link",
-      tooltip: "Dashboard",
+      tooltip: "Read Exce xlsx",
       icon: "chrome_reader_mode",
       state: "forms/read-excel"
     }, 
     {
-      name: "Hekp",
+      name: "File Base64",
       type: "link",
-      tooltip: "Dashboard",
+      tooltip: "File Base64",
+      icon: "chrome_reader_mode",
+      state: "forms/file-to-b64"
+    }, 
+    {
+      name: "Help",
+      type: "link",
+      tooltip: "Help",
       icon: "help",
       state: "dashboard/home"
     }
@@ -44,3 +51,4 @@ export class SidebarSideComponent implements OnInit {
   }
 
 }
+
