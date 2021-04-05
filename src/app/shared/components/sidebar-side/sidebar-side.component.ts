@@ -39,11 +39,11 @@ export class SidebarSideComponent implements OnInit {
       state: "forms/file-to-b64"
     }, 
     {
-      name: "Help",
+      name: "Task",
       type: "link",
       tooltip: "Help",
       icon: "help",
-      state: "dashboard/home"
+      state: "tasks"
     }
   ];
 

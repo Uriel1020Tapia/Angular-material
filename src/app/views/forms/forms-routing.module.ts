@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { TaskComponent } from '../tasks/task/task.component';
 import { BasicFormComponent } from './basic-form/basic-form.component';
 import { FileToBase64Component } from './file-to-base64/file-to-base64.component';
 import { ReadExcelComponent } from './read-excel/read-excel.component';
+import { AddComponent } from '../tasks/add/add.component';
 
 const routes: Routes = [
   {

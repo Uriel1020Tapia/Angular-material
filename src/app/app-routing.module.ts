@@ -15,19 +15,21 @@ const routes: Routes = [
       {
         path: "dashboard",
         loadChildren: () =>
-          import("./views/dashboard/dashboard.module").then(
-            (m) => m.DashboardModule
-          ),
+          import("./views/dashboard/dashboard.module").then((m) => m.DashboardModule),
       },
       {
         path:'forms',
         loadChildren: ()=> import("./views/forms/forms.module").then((m)=> m.AppFormsModule)
+      },
+      {
+        path:'tasks',
+        loadChildren: ()=> import("./views/tasks/tasks.module").then((m)=> m.TasksModule)
       }
     ],
   },
   {
     path: "**",
-    redirectTo: "sessions/404",
+    redirectTo: "/dashboard/home",
   },
 ];
 

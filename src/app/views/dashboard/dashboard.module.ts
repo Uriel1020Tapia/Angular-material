@@ -6,15 +6,18 @@ import { SharedMaterialModule } from 'src/app/shared/shared-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HomeComponent } from './home/home.component';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { CarouselComponent } from '../forms/carousel/carousel.component';
 
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    CarouselComponent
   ],
   imports: [
     CommonModule,
     SharedMaterialModule,
+    
     FlexLayoutModule,
     DashboardRoutingModule,
     PerfectScrollbarModule,

@@ -237,3 +237,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     }
   }
   
+
+  .mat-form-field-flex {
+    background-color: white !important;
+    padding-left: 0 !important;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  textarea {
+    height: 150px !important;
+  }

@@ -1,19 +1,8 @@
 <div fxLayout="row wrap">
-  <mat-card fxFlex="100" fxFlex.gt-xs="calc(50% - 16px)">
-    <div fxLayout="row" fxLayoutAlign="start center">
-      <button class="mat-elevation-z0" mat-mini-fab color="primary">
-        <mat-icon class="mat-18"> trending_up </mat-icon>
-      </button>
-      <div class="mat-card-title mat-color-primary m-0 ml-12">Active Users</div>
-    </div>
-    <div class="mt-16" fxLayout="row" fxLayoutAlign="space-between center">
-      <h2 class="m-0 text-muted text-28 font-weight-bold">10.8k</h2>
-      <div fxLayout="row wrap" fxLayoutAlign="start center">
-        <div class="small-circle mat-bg-primary">
-          <mat-icon class="text-12"> expand_less </mat-icon>
-        </div>
-        <small class="m-0 ml-4 mat-color-primary text-12"> (+21%) </small>
-      </div>
+ 
+  <mat-card fxFlex="100" fxFlex.gt-xs="100">
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <app-carousel [slides]="slides"></app-carousel>
     </div>
   </mat-card>
   <mat-card fxFlex="100" fxFlex.gt-xs="calc(50% - 16px)">

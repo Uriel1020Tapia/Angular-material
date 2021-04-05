@@ -21,12 +21,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { ReaderExcelDirective } from 'src/app/directives/reader-excel.directive';
 import {MatTableModule} from '@angular/material/table';
 import { FileToBase64Component } from './file-to-base64/file-to-base64.component';
+
 @NgModule({
   declarations: [
     BasicFormComponent,
     ReadExcelComponent,
     ReaderExcelDirective,
-    FileToBase64Component
+    FileToBase64Component,
   ],
   imports: [
     CommonModule,

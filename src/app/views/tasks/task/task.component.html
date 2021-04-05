@@ -1,0 +1,95 @@
+
+
+<!-- <div class="home">
+    <div class="header">
+      <h1>Dashboard</h1>
+      <div class="content">
+        <div class="total-task-chart">
+          <div class="chart">
+            <canvas
+              baseChart
+              [data]="doughnutChartData"
+              [labels]="doughnutChartLabels"
+              [chartType]="doughnutChartType"
+              [options]="doughnutChartOptions"
+              [colors]="doughnutChartColor"
+            >
+            </canvas>
+          </div>
+          <div class="total-task">
+            <p class="data">100</p>
+            <p class="data-type">Tasks</p>
+          </div>
+        </div>
+        <div>
+          <div  class="total-task-analytics" *ngFor="let item of typeData">
+            <div class="display"></div>
+            <div>
+              <p class="data">{{item.count}} %</p>
+              <p class="data-type">{{item.type}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div>
+    <div fxLayout="row wrap">
+      <div fxFlex="100" fxFlex.sm="50" fxFlex.gt-sm="50">
+        <div fxLayout="row wrap">
+          <div
+          *ngFor="let item of typeData"
+          fxFlex="100"
+          fxFlex.sm="100"
+          fxFlex.gt-sm="100"
+        >
+          <mat-card
+            class="p-24"
+            fxFlex
+            fxLayout="row"
+            fxLayoutAlign="space-between center"
+          >
+            <div fxLayout="row" fxLayoutAlign="center center">
+              <mat-icon class="text-48 mat-color-warn" *ngIf="item.type === 'pending'">hdr_strong</mat-icon>
+              <mat-icon class="text-48 mat-color-accent" *ngIf="item.type === 'todo'">date_range</mat-icon>
+              <mat-icon class="text-48 mat-color-primary" *ngIf="item.type === 'done'">done_all</mat-icon>
+              <div class="ml-12">
+                <h1 class="m-0 text-muted mb-4">{{item.count}} %</h1>
+                <h3 class="m-0 mat-color-warn">{{item.type}}</h3>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+        </div>
+      </div>
+      <div fxFlex="100" fxFlex.sm="50" fxFlex.gt-sm="50">
+        <div fxLayout="row wrap">
+          <mat-card fxFlex="100">
+            <mat-card-title class="mb-1">Tasks</mat-card-title>
+            <mat-card-content 
+            >
+            <canvas     style="height: 280px"
+            baseChart
+            [data]="doughnutChartData"
+            [labels]="doughnutChartLabels"
+            [chartType]="doughnutChartType"
+            [options]="doughnutChartOptions"
+            [colors]="doughnutChartColor"
+          >
+          </canvas>
+          </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+      <div fxFlex="100" fxFlex.sm="100" fxFlex.gt-sm="100">
+        <div fxLayout="row wrap">
+          <mat-card fxFlex="100">
+            <mat-card class="mat-bg-gray p-sm-24 mat-elevation-z0">
+              <app-list (refreshEmitter)="refreshEmitter()"></app-list>
+            </mat-card>
+          </mat-card>
+        </div>
+      </div>
+      <app-navigation></app-navigation>
+  </div>
